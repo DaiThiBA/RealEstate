@@ -1,0 +1,25 @@
+version: "3.1"
+
+nlu:
+  - intent: search_real_estate
+    examples: |
+      - Tôi muốn tìm nhà
+      - Tìm bất động sản
+      - Tìm nhà ở [Long Bình](location)
+      - Giúp tôi tìm bất động sản ở [Long Bình](location)
+      - Tìm nhà có [2](bedrooms) phòng ngủ
+      - Tìm bất động sản [Long Bình](location) có [2](bedrooms) phòng ngủ
+
+  - intent: inform
+    examples: |
+      - Ở [Long Bình](location)
+      - [Long Bình](location)
+      - [2](bedrooms) phòng ngủ
+      - Cần [2](bedrooms) phòng
+      - Ít nhất [2](bedrooms) phòng ngủ
+      - Tôi cần tìm nhà ở [Long Bình](location)
+      - khu vực [13000](region)
+      - vùng [13000](region)
+      - khu [13000](region)
+      - [Long Bình](location) [2](bedrooms) phòng ngủ
+

@@ -1,0 +1,50 @@
+version: "3.1"
+
+intents:
+  - search_real_estate
+  - inform
+
+entities:
+  - location
+  - bedrooms
+  - region
+
+slots:
+  location:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: location
+
+  bedrooms:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: bedrooms
+
+  region:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: region
+
+  work_latitude:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: work_latitude
+
+  work_longitude:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: work_longitude
+
+responses:
+  utter_ask_location:
+    - text: "Bạn muốn tìm bất động sản ở khu vực nào?"
+  utter_ask_bedrooms:
+    - text: "Bạn cần ít nhất bao nhiêu phòng ngủ?"
+
+actions:
+  - action_search_real_estate
